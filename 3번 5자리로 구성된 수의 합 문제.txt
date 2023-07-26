@@ -1,0 +1,33 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+class Main {
+    Main() {
+    }
+
+    public static void main(String[] args) throws Exception {
+        int[] arr = setArray();
+        System.out.println("모든 수의 합은" + getSum(arr) + "입니다.");
+    }
+
+    public static int[] setArray() throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] arr = new int[5];
+
+        for(int i = 0; i < 5; ++i) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+
+        return arr;
+    }
+
+    public static int getSum(int[] arr) {
+        int result = 0;
+
+        for(int i = 0; i < 5; ++i) {
+            result += arr[i];
+        }
+
+        return result;
+    }
+}

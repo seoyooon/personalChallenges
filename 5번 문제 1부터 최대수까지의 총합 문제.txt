@@ -1,0 +1,14 @@
+import java.io.*;
+public class Sum {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // 키보드 입력 받기
+        System.out.println("최대 수를 입력해 주세요.");
+        int number = Integer.parseInt(br.readLine()); // BufferedReader에서 정수 값 받기
+
+        int sum = 0; // 1~최대수의 합을 저장할 변수 int sum 선언
+        for(int i = 1; i < number; i++) {
+            sum += i; // sum에 1 ~ number(최대수)의 총합 중첩하여 저장
+        }
+        System.out.println("1부터" + number + "까지의 합은" + sum + "입니다.");
+    }
+}

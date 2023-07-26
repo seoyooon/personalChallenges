@@ -1,0 +1,56 @@
+import java.io.*;
+
+// TV 리모컨 문제
+
+public class TV {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("원하는 메뉴 버튼을 눌러주세요");
+
+        // 1번 버튼을 누를 경우, "ON" -> "OFF" or "OFF" -> "ON" 으로 변경(if문 안에 if문을 써야 하나..?)
+        int button = Integer.parseInt(br.readLine());
+        if(button == 1) {
+            System.out.println("전원 변경");
+            String btn = "";
+            if(btn == "ON") {
+                System.out.println("OFF");
+            }
+            else if (btn == "OFF") {
+                System.out.println("ON");
+            }
+        }
+        // 2번 버튼을 누를 경우, 볼륨 상태 변경
+        else if (button == 2) {
+            System.out.println("볼륨 상태 변경");
+            if (int i = 0; i <= 100; i++) {
+                System.out.println("볼륨 상태를" + i + "로 변경합니다.");
+            }
+            else {
+                System.out.println("범위 외 값이므로, 변경되지 않았습니다. 다시 입력해 주세요.");
+            }
+
+        }
+        // 3번 버튼을 누를 경우, 채널 상태 변경
+        else if (button == 3) {
+            System.out.println("채널 상태 변경");
+            if(int i = 0; i <= 50; i++) {
+                System.out.println("채널을" + i + "번으로 이동합니다.");
+            }
+            else {
+                System.out.println("범위 외 값이므로, 변경되지 않았습니다. 다시 입력해 주세요.");
+            }
+
+        }
+        // 4번 버튼을 누르는 경우, 상태 확인
+        else if (button == 4) {
+            System.out.println("상태 확인");
+        }
+
+        // 1~4외의 버튼을 누르는 경우
+        else {
+            System.out.println("메뉴에 없는 번호입니다. 다시 입력해 주세요.");
+        }
+    }
+}
+
+// 추가해야될 것 : 상태 확인하기, 종료 조건 END 입력하기, 오류 확인하기

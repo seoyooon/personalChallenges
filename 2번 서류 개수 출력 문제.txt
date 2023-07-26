@@ -1,0 +1,24 @@
+import java.io.*;
+
+/**
+ * 2. 다음과 같은 조건입니다.
+ * 회사에서 모든 인원에게, 각 n개의 필수 서류를 제공해준다고 할때, 총 몇개의 서류가 필요할지 보일 프로그램을 짜려고합니다.
+ * 회사 인원수와 서류 갯수를 입력받고 실행 결과의 모습은 다음과 같을 때의 코드를 작성해주세요.
+ * ----------------------------------------------
+ * 총 인원수를 입력해주세요 >
+ * 필수 서류는 몇개인가요 >
+ * 총 __개의 서류가 필요합니다.
+ * ----------------------------------------------
+ * */
+public class Main {
+    public static void main (String[] args) throws Exception {
+        System.out.println("총 인원수를 입력해 주세요");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        System.out.println("필수 서류는 몇개인가요");
+        int x = Integer.parseInt(br.readLine());
+        System.out.println("총 " + (n*x) + "개의 서류가 필요합니다.");
+
+        br.close();
+    }
+}
